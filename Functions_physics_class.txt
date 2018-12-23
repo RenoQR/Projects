@@ -1,0 +1,72 @@
+Programmed by René Nicolás Quijada Romero
+
+This code uses various tools Python provides such as functions, arguments inside 
+the functions, constants, print of the outputs of the functions, etc. 
+
+Phone number: 5525404299
+e-mail: rene.nicolas.quijada.romero@gmail.com
+
+#Definition of later variables
+train_mass = 22680
+train_acceleration = 10
+train_distance = 100
+bomb_mass = 1
+
+#First function (From fahrenheit to celsius)
+
+def f_to_c(f_temp):
+  c_temp = (f_temp - 32) * 5/9
+  return c_temp
+
+#Second function (From celsius to fahrenheit)
+
+def c_to_f(c_temp):
+  f_temp = c_temp * (9/5) +32
+  return f_temp
+
+#Tests of first and second function
+
+f100_in_celsius = f_to_c(100)
+c0_in_fahrenheit = c_to_f(0)
+
+print(f100_in_celsius)
+print(c0_in_fahrenheit)
+
+#Second Newton's law function (Force and acceleration)
+
+#Definition of the function
+def get_force(mass, acceleration):
+  force = mass*acceleration
+  return force
+
+#Test of Newton's function
+train_force = get_force(train_mass, train_acceleration)
+
+print("The train force is"+" "+str(train_force))
+
+#Einstein's function
+
+def get_energy (mass, c= 3 * 10**8):
+ energy = mass*c
+ return energy
+  
+bomb_energy = get_energy(bomb_mass)
+
+#Print of Einstein's function
+
+print("A 1kg bomb supplies" + " " + str(bomb_energy) + " " + "joules.")
+
+#Final function
+
+def get_work(mass, acceleration, distance):
+ 
+ force = get_force(mass, acceleration)
+ work = force*distance
+ return work
+
+train_work = get_work(train_mass, train_acceleration, train_distance)
+
+print("The GE train does"+" "+str(train_work)+" "+"Joules of work over"+" "+str(train_distance)+" "+"meters")
+
+
+

@@ -1,0 +1,65 @@
+Programmed by René Nicolás Quijada Romero
+
+This code uses various tools Python provides such as functions, arguments inside 
+the functions, constants, print of the outputs of the functions, etc. 
+
+Phone number: 5525404299
+e-mail: rene.nicolas.quijada.romero@gmail.com
+
+
+#Here the program decides which cost would be used to ship through ground based on the weight of the package.
+def ground_cost(weight):
+  if weight<=2:
+    g_cost=weight*1.50+20
+    return g_cost
+  elif weight>2 and weight<=6:
+    g_cost=weight*3+20
+    return g_cost
+  elif weight>6 and weight<=10:
+    g_cost=weight*4+20
+    return g_cost
+  else:
+    g_cost=weight*4.75+20
+    return g_cost 
+  
+#Here the program decides which cost would be used to ship through drone based on the weight of the package.
+def drone_shipping(weight):
+  if weight<=2:
+    d_cost=weight*4.50
+    return d_cost
+  elif weight>2 and weight<=6:
+    d_cost=weight*9.00
+    return d_cost
+  elif weight>6 and weight<=10:
+    d_cost=weight*12.00
+    return d_cost
+  else:
+    d_cost=weight*14.25
+    return d_cost
+  
+
+#This is the constant price that would be required to ship through premium service
+premium_cost = 125
+
+#The program sets the price of ground and drone shipping obtained in the past two sections. 
+def best_offer(weight):
+  ground_cst=ground_cost(weight)
+  drone_cst=drone_shipping(weight)
+
+#The program compares ground shipping price vs drone shipping and premium cost separately. If it's cheaper, this is the best offer.   
+  if ground_cst < drone_cst and ground_cst<premium_cost:
+    return print("""The best method for you to ship your package is through ground and it will cost"""+""" """+str(ground_cst)+" "+"dollars.")
+
+#The program compares drone shipping price vs ground shipping and premium cost separately. If it's cheaper, this is the best offer.  
+  
+  elif  drone_cst<ground_cst and ground_cst<premium_cost:
+    return print("""The best method for you to ship your package is through drone and it will cost"""+""" """+str(drone_cst)+" "+"dollars.")
+
+#If none of the previous two conditions are satisfied, it's assumed that the best offer is going to be the Premium ground service and it's printed.
+  
+  else:
+    return print("""The best method for you to ship your package is through premium ground service and it will cost 125 dollars.""")
+  
+best_offer(4.8)
+best_offer(41.5)
+  
