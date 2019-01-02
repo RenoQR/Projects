@@ -1,0 +1,27 @@
+#Programmed by René Nicolás Quijada Romero
+
+#This code receives a list and finds the largest number of it. Reasoning:
+
+#---------------------°°°°°°°°°°°°°°°--------------------------------
+# a > b, then check a > c, then check a > d ... if a > n, maximum = a
+# if a < b, then a != maximum and b es set as temp. maximum, now check (1) with b
+# if a = b continue
+
+#Phone number: 5525404299
+#e-mail: rene.nicolas.quijada.romero@gmail.com
+
+
+def max_num(nums):
+  maximum = nums[0]
+  for num in nums:
+    if maximum > num:
+      continue
+    else:
+      maximum = num
+      continue
+  return maximum
+    
+
+
+#Uncomment the line below when your function is done
+#print(max_num([50, -10, 0, 75, 20]))

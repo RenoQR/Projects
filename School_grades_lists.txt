@@ -1,0 +1,34 @@
+Programmed by René Nicolás Quijada Romero
+
+This code uses various tools Python provides such as lists, zip function,
+concatenation of lists, lists syntax, etc. 
+
+Phone number: 5525404299
+e-mail: rene.nicolas.quijada.romero@gmail.com
+
+#Creates a list with the grades from the last semester
+last_semester_gradebook = [("politics", 80), ("latin", 96), ("dance", 97), ("architecture", 65)]
+
+#Creates two lists from both subjects and grades of this semester
+subjects = ['physics', 'calculus', 'poetry', 'history']
+grades = [98, 97, 85, 88]
+
+
+#Adds two separate elements to the lists subjects and grades through append function.
+subjects.append('computer science')
+grades.append(100)
+
+
+#Creates a list called "gradebook" for this semester's grades through zip function.
+gradebook = list(zip(subjects, grades))
+
+#Adds two more elements to the gradebook list. 
+gradebook.append(("visual arts", 93))
+
+
+#Concatenates both gradebook list and last semester grades list.
+full_gradebook = gradebook+last_semester_gradebook
+
+#Prints the final list. 
+
+print(list(full_gradebook))

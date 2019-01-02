@@ -6,6 +6,10 @@ the functions, constants, print of the outputs of the functions, etc.
 Phone number: 5525404299
 e-mail: rene.nicolas.quijada.romero@gmail.com
 
+print("""Hello and welcome to the shipping-calculation program. You will have to introduce the weight of your package so we can calculate which would be the
+best way for you to ship it and calculate the cost of it. It order to do so, please write the following: calculation(n) And replace n for the weight of your package.
+Happy shipping!"""
+)
 
 #Here the program decides which cost would be used to ship through ground based on the weight of the package.
 def ground_cost(weight):
@@ -42,7 +46,7 @@ def drone_shipping(weight):
 premium_cost = 125
 
 #The program sets the price of ground and drone shipping obtained in the past two sections. 
-def best_offer(weight):
+def calculation(weight):
   ground_cst=ground_cost(weight)
   drone_cst=drone_shipping(weight)
 
@@ -60,6 +64,5 @@ def best_offer(weight):
   else:
     return print("""The best method for you to ship your package is through premium ground service and it will cost 125 dollars.""")
   
-best_offer(4.8)
-best_offer(41.5)
+
   

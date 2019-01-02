@@ -1,0 +1,62 @@
+#Programmed by René Nicolás Quijada Romero
+
+#This code uses various tools Python provides such as lists, sorting commands, zipping, concatenation, etc. 
+
+#Phone number: 5525404299
+#e-mail: rene.nicolas.quijada.romero@gmail.com
+
+
+#First list
+hairstyles = ["bouffant", "pixie", "dreadlocks", "crew", "bowl", "bob", "mohawk", "flattop"]
+
+#Prices list
+prices = [30, 25, 40, 20, 20, 35, 50, 35]
+
+#Number of times these haircuts styles were selected last week
+last_week = [2, 3, 5, 8, 4, 4, 6, 2]
+
+#Creates new variable
+total_price = 0
+
+#Gives the total prices through a loop. For each <element> in the list prices do the following: set the variable total_price equal to the total price in the previous iteration plus the element <price> (temp value) of the loop. 
+
+for price in prices:
+  total_price = total_price + price
+  
+
+#Gives the average price using the total price obtined before and dividing for the number of haircuts styles.
+
+average_price = total_price / len(prices)
+
+#Prints the average cost of the haircut.
+
+print("Average Haircut Price: " + str(average_price))
+
+#Creates a list with the new prices through comprehension using the following syntax: each element will be the temp element <price> minus five for each element price in the list prices.
+new_prices = [price - 5 for price in prices]
+
+#Print the list new_prices
+print(new_prices)
+
+#Creates new variable
+
+total_revenue = 0
+
+#Creates a loop to determine the total revenue. <i> is a temp variable recurring in the loop from 0 to 8. the function range creates a list from 0 to the length of the hairstyles, which is 8, then, there are going to be eight iterations. <i> is going to be replaced in the for loop. The total revenue equals the price [number of iteration] times how many times the haircut (not te haircut per se, but the price of the haircut which is ORDERED in both lists, corresponding each haircut one and only one price) was requested last week.
+for i in range(len(hairstyles)):
+  total_revenue = prices[i]*last_week[i] + total_revenue
+  
+#Prints the total revenue
+print("Total Revenue: " + str(total_revenue))
+
+#Gets the average revenue
+average_daily_revenue = total_revenue / 7
+
+#Prints the average daily revenue
+print(average_daily_revenue)
+
+#Creates a new list with the prices under 30. The recurrent value is going to be hairstyles. Its index i is going to be based on the following: for the element i in the range 0 to 8 (list from the number of prices of haircuts, from 0 to the length of the list of new prices of haircuts) if the element with index 0 of the new prices is less than 30, the first parameter is going to be considered. 
+cuts_under_30 = [hairstyles[i] for i in range(0, len(new_prices)) if new_prices[i] < 30]
+
+#Prints the new haircutr that are under 30 
+print(cuts_under_30)

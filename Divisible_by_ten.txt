@@ -1,0 +1,17 @@
+#Programmed by René Nicolás Quijada Romero
+
+#This code receives a list as an input and returns the numbers divisble by
+#ten as an output
+
+#Phone number: 5525404299
+#e-mail: rene.nicolas.quijada.romero@gmail.com
+
+def divisible_by_ten(nums):
+  counter = 0 
+  for num in nums:
+    if num % 10 == 0:
+      counter += 1
+  return counter
+
+#Uncomment the line to test
+#print(divisible_by_ten([20, 25, 30, 35, 40]))

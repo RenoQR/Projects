@@ -1,0 +1,20 @@
+#Programmed by René Nicolás Quijada Romero
+
+#This code receives a two lists as input: bases and powers. It raises each
+#of the bases to each of the powers
+
+#Phone number: 5525404299
+#e-mail: rene.nicolas.quijada.romero@gmail.com
+
+def exponents(bases, powers):
+  results = []
+  
+  for base in bases:
+    for exponent in powers:
+      result = base ** exponent
+      results.append(result)
+      
+  return(results)
+
+#Uncomment the line below when your function is done
+print(exponents([2, 3, 4], [1, 2, 3]))

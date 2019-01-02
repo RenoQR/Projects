@@ -1,0 +1,17 @@
+#Programmed by René Nicolás Quijada Romero
+
+#This code receives a list of names as an input and returns another list
+#with greetings for each name in the first list
+
+#Phone number: 5525404299
+#e-mail: rene.nicolas.quijada.romero@gmail.com
+
+
+def add_greetings(names):
+  greetings = ['Hello, ' + name for name in names]
+  return greetings
+  
+
+
+#Uncomment the line below to test
+#print(add_greetings(["Owen", "Max", "Sophie"]))

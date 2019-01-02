@@ -1,0 +1,64 @@
+#Programmed by René Nicolás Quijada Romero
+
+#This code uses various tools Python provides such as lists, sorting commands, zipping, concatenation, etc. 
+
+#Phone number: 5525404299
+#e-mail: rene.nicolas.quijada.romero@gmail.com
+
+#Creates a list of the pizzas sold
+toppings = ['pepperoni', 'pinneaple', 'cheese', 'sausage', 'olives', 'anchovies', 'mushrooms']
+
+#Creates a list of the pizza's prices
+prices = [2, 6, 1, 3 , 2, 7 , 2]
+
+#Gives the length of the toppings list
+num_pizzas = len(toppings)
+
+#Prints a message based on the number of pizzas that are sold
+print('We sell '+ str(num_pizzas) +' different kinds of pizza!')
+
+#Creates a list of the pizzas sold paired with their prices
+pizzas = list(zip(prices, toppings))
+
+#Prints the previous list with the structure [('price', topping)]
+print(pizzas)
+
+#Sorts the list pizzas in ascending price order; this modifies the list itself.
+
+pizzas.sort()
+
+#Prints the pizzas list already sorted
+
+print(pizzas)
+
+#Creates a variable which holds the cheapest element of the pizzas list
+
+cheapest_pizza = pizzas[0]
+
+#Checks the cheapest pizza is cheese (according to the sorted list)
+
+print(cheapest_pizza)
+
+#Stores the priciest pizza 
+
+priciest_pizza = pizzas[-1]
+
+#Checks the priciest pizza is the anchovies one
+
+print(priciest_pizza)
+
+#Creates a variable with the three lowest cost pizzas.
+
+three_cheapest = pizzas[:3]
+
+#Checks the three cheapest pizzas
+
+print(three_cheapest)
+
+#Checks how many $2 slices are in the menu
+
+num_two_dollar_slices = prices.count(2)
+
+#Prints the previous resut
+
+print(num_two_dollar_slices)

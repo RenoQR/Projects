@@ -1,0 +1,45 @@
+#Programmed by René Nicolás Quijada Romero
+
+#This code receives two lists of the same length and finds the indices in which the values are the same
+
+#Phone number: 5525404299
+#e-mail: rene.nicolas.quijada.romero@gmail.com
+
+
+def same_values(lst1, lst2):
+  
+  same_values = []
+  if len(lst1) == len(lst2):
+    for index in range(len(lst1)):
+      if lst1[index] == lst2[index]:
+        same_values.append(index)
+    return same_values
+    
+  else:
+    error_message = ("The lists are not the same length")
+    return error_message
+
+
+#Uncomment the line below when your function is done
+print(same_values([5, 1, -10, 3, 3], [5, 10, -10, 3, 5]))
+
+#-------------------VERSION 2--------------------------------
+#returns the values themselves
+
+#Write your function here
+def same_values(lst1, lst2):
+  
+  same_values = []
+  if len(lst1) == len(lst2):
+    for index in range(len(lst1)):
+      if lst1[index] == lst2[index]:
+        same_values.append(lst1[index])
+    return same_values
+    
+  else:
+    error_message = ("The lists are not the same length")
+    return error_message
+
+
+#Uncomment the line below when your function is done
+print(same_values([5, 1, -10, 3, 3], [5, 10, -10, 3, 5]))

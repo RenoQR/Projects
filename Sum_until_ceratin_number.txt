@@ -1,0 +1,30 @@
+#Programmed by René Nicolás Quijada Romero
+
+#This code receives a list as input. It will sum the numbers of the list until
+# it is more than 9000. It uses the break function to stop a loop. 
+
+#Reasoning ---------------------°°°-----------------------
+#The sum has to continue while it is less than 9000, but when sum > 9000
+#it has to <<stop>>. 
+
+#Phone number: 5525404299
+#e-mail: rene.nicolas.quijada.romero@gmail.com
+
+def over_nine_thousand(lst):
+  onaito = 9000
+  suma = 0
+  
+  if len(lst) == 0:
+    return 0
+  
+  else:
+#For each number in the list
+    for num in lst:
+#It will be added to the total 
+      suma = suma + num
+#If the total in each iteration is less than onaito (9000) it continues
+      if suma > onaito:
+#When total = onaito, it stops.
+        break
+    
+  return suma
